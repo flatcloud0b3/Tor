@@ -25,7 +25,7 @@
 ## Here is a list of the main goals Tor should accomplish:
 =========================================================
 
-        * Safe. Remember we are serving people under _heavy censorship_.
+        * Safe. Remember we are serving people under heavy censorship.
 
         * Easy to use. The fewer user interactions, the better.
 
