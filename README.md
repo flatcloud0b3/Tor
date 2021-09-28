@@ -38,8 +38,8 @@
         * Language and provider friendly. It should be easy to support new languages
         and to add new providers for storing packages and generate links.
 
-## Installing Tor
-================
+## Installing Tor on powerpc64le
+=================================
 
 ### To install Tor locally please install the following package (on debian):
 
