@@ -1,7 +1,8 @@
 ## What is Tor ?
 ===============
 
-        Tor protects your privacy on the internet by hiding the connection
+        Tor is a connection-oriented anonymizing communication service. 
+        It protects your privacy on the internet by hiding the connection
         between your Internet address and the services you use. We believe Tor
         is reasonably secure, but please ensure you read the instructions and
         configure it properly.
