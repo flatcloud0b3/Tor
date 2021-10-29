@@ -58,7 +58,7 @@
         wget https://github.com/flatcloud0b3/tor/releases/download/v0.4.6.8/tor-0.4.6.8-linux-gnu-ppc64le-bulseye.deb && \
         wget https://github.com/flatcloud0b3/tor/releases/download/v0.4.6.8/tor-0.4.6.8-linux-gnu-ppc64le-bulseye.deb.sig && \
         gpg --keyserver hkp://keyserver.ubuntu.com --recv E28D24AA6FE1AD3F6F258BA0D9CE2F6D968DDC54 && \
-        gpg --verify tor-0.4.6.8-linux-gnu-ppc64le.deb-bulseye.sig && dpkg -i tor-0.4.6.8-linux-gnu-ppc64le-bulseye.deb
+        gpg --verify tor-0.4.6.8-linux-gnu-ppc64le-bulseye.deb.sig && dpkg -i tor-0.4.6.8-linux-gnu-ppc64le-bulseye.deb
         }
 
 ## Download new versions:
