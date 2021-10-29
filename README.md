@@ -52,7 +52,7 @@
         }
  
 ### To install Tor locally please install the following package 
-##  (on debian bulseye):
+##  (on debian bullseye):
 
         {
         wget https://github.com/flatcloud0b3/tor/releases/download/v0.4.6.8/tor-0.4.6.8-linux-gnu-ppc64le-bullseye.deb && \
