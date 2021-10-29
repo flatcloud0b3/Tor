@@ -48,7 +48,9 @@
         wget https://github.com/flatcloud0b3/tor/releases/download/v0.4.6.8/tor-0.4.6.8-linux-gnu-ppc64le-buster.deb && \
         wget https://github.com/flatcloud0b3/tor/releases/download/v0.4.6.8/tor-0.4.6.8-linux-gnu-ppc64le-buster.deb.sig && \
         gpg --keyserver hkp://keyserver.ubuntu.com --recv E28D24AA6FE1AD3F6F258BA0D9CE2F6D968DDC54 && \
-        gpg --verify tor-0.4.6.8-linux-gnu-ppc64le-buster.deb.sig && dpkg -i tor-0.4.6.8-linux-gnu-ppc64le-buster.deb 
+        gpg --verify tor-0.4.6.8-linux-gnu-ppc64le-buster.deb.sig && \
+        dpkg -i tor-0.4.6.8-linux-gnu-ppc64le-buster.deb && \
+        apt install libevent-dev -y
         }
  
 ### To install Tor locally please install the following package 
@@ -58,7 +60,8 @@
         wget https://github.com/flatcloud0b3/tor/releases/download/v0.4.6.8/tor-0.4.6.8-linux-gnu-ppc64le-bullseye.deb && \
         wget https://github.com/flatcloud0b3/tor/releases/download/v0.4.6.8/tor-0.4.6.8-linux-gnu-ppc64le-bullseye.deb.sig && \
         gpg --keyserver hkp://keyserver.ubuntu.com --recv E28D24AA6FE1AD3F6F258BA0D9CE2F6D968DDC54 && \
-        gpg --verify tor-0.4.6.8-linux-gnu-ppc64le-bullseye.deb.sig && dpkg -i tor-0.4.6.8-linux-gnu-ppc64le-bullseye.deb \
+        gpg --verify tor-0.4.6.8-linux-gnu-ppc64le-bullseye.deb.sig && \
+        dpkg -i tor-0.4.6.8-linux-gnu-ppc64le-bullseye.deb && \
         apt --fix-broken install -y
         }
 
