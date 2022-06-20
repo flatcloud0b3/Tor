@@ -1,108 +1,70 @@
-## What is Tor ?
-===============
+Tor protects your privacy on the internet by hiding the connection between
+your Internet address and the services you use. We believe Tor is reasonably
+secure, but please ensure you read the instructions and configure it properly.
 
-        Tor is a connection-oriented anonymizing communication service. 
-        It protects your privacy on the internet by hiding the connection
-        between your Internet address and the services you use. We believe Tor
-        is reasonably secure, but please ensure you read the instructions and
-        configure it properly.
+## Build
 
-## To build Tor from source:
-===========================
+To build Tor from source:
 
-        ./configure && make && make install
+```
+./configure
+make
+make install
+```
 
-## To build Tor from a just-cloned git repository:
-=================================================
+To build Tor from a just-cloned git repository:
 
-        sh autogen.sh && ./configure && make && make install
+```
+./autogen.sh
+./configure
+make
+make install
+```
 
-## Home page:
-============
+## Releases
 
-        https://www.torproject.org/
+The tarballs, checksums and signatures can be found here: https://dist.torproject.org
 
+- Checksum: `<tarball-name>.sha256sum`
+- Signatures: `<tarball-name>.sha256sum.asc`
 
-## Here is a list of the main goals Tor should accomplish:
-=========================================================
+### Schedule
 
-        * Safe. Remember we are serving people under heavy censorship.
+You can find our release schedule here:
 
-        * Easy to use. The fewer user interactions, the better.
+- https://gitlab.torproject.org/tpo/core/team/-/wikis/NetworkTeam/CoreTorReleases
 
-        * Clean code. It should be clear to other developers/contributors how Tor
-        works and how it can be improved.
+### Keys that CAN sign a release
 
-        * Automated. We should try to automate things as much as possible.
+The following keys are the maintainers of this repository. One or many of
+these keys can sign the releases, do NOT expect them all:
 
-        * Language and provider friendly. It should be easy to support new languages
-        and to add new providers for storing packages and generate links.
+- Alexander Færøy:
+    [514102454D0A87DB0767A1EBBE6A0531C18A9179](https://keys.openpgp.org/vks/v1/by-fingerprint/1C1BC007A9F607AA8152C040BEA7B180B1491921)
+- David Goulet:
+    [B74417EDDF22AC9F9E90F49142E86A2A11F48D36](https://keys.openpgp.org/vks/v1/by-fingerprint/B74417EDDF22AC9F9E90F49142E86A2A11F48D36)
+- Nick Mathewson:
+    [2133BC600AB133E1D826D173FE43009C4607B1FB](https://keys.openpgp.org/vks/v1/by-fingerprint/2133BC600AB133E1D826D173FE43009C4607B1FB)
 
-## Installing Tor on powerpc64le
-=================================
+## Development
 
-### To install Tor locally please install the following package 
-##  (on debian buster):
+See our hacking documentation in [doc/HACKING/](./doc/HACKING).
 
-        {
-        wget https://github.com/flatcloud0b3/tor/releases/download/v0.4.6.8/tor-0.4.6.8-linux-gnu-ppc64le-buster.deb && \
-        wget https://github.com/flatcloud0b3/tor/releases/download/v0.4.6.8/tor-0.4.6.8-linux-gnu-ppc64le-buster.deb.sig && \
-        gpg --keyserver hkp://keyserver.ubuntu.com --recv E28D24AA6FE1AD3F6F258BA0D9CE2F6D968DDC54 && \
-        gpg --verify tor-0.4.6.8-linux-gnu-ppc64le-buster.deb.sig && \
-        dpkg -i tor-0.4.6.8-linux-gnu-ppc64le-buster.deb && \
-        apt install libevent-dev -y
-        }
- 
-### To install Tor locally please install the following package 
-##  (on debian bullseye):
+## Resources
 
-        {
-        wget https://github.com/flatcloud0b3/tor/releases/download/v0.4.6.8/tor-0.4.6.8-linux-gnu-ppc64le-bullseye.deb && \
-        wget https://github.com/flatcloud0b3/tor/releases/download/v0.4.6.8/tor-0.4.6.8-linux-gnu-ppc64le-bullseye.deb.sig && \
-        gpg --keyserver hkp://keyserver.ubuntu.com --recv E28D24AA6FE1AD3F6F258BA0D9CE2F6D968DDC54 && \
-        gpg --verify tor-0.4.6.8-linux-gnu-ppc64le-bullseye.deb.sig && \
-        dpkg -i tor-0.4.6.8-linux-gnu-ppc64le-bullseye.deb && \
-        apt --fix-broken install -y
-        }
+Home page:
 
-## Download new versions:
-========================
+- https://www.torproject.org/
 
-        https://www.torproject.org/download/download.html
+Download new versions:
 
-## Documentation, including links to installation and setup instructions:
-========================================================================
+- https://www.torproject.org/download/download.html
 
-        https://www.torproject.org/docs/documentation.html
+Documentation, including links to installation and setup instructions:
 
-## Making applications work with Tor:
-====================================
+- https://www.torproject.org/docs/documentation.html
 
-        https://gitlab.torproject.org/legacy/trac/-/wikis/doc/TorifyHOWTO
+Frequently Asked Questions:
 
-## Frequently Asked Questions:
-=============================
+- https://www.torproject.org/docs/faq.html
 
-        https://www.torproject.org/docs/faq.html
-
-## Release timeline:
-===================
-
-        https://gitlab.torproject.org/tpo/core/team/-/wikis/NetworkTeam/CoreTorReleases
-
-## To get started working on Tor development:
-============================================
-
-        See the doc/HACKING directory.
-
-## Running tests
-================
-
-Tor includes PyTest unit tests. To run the tests, first install the dependencies above and then run:
-
-
-        ```
-        $ python3 scripts/create_db -n -c -o -f tests/tor.db
-        $ python3 scripts/add_links_to_db -f tests/tor.db
-        $ pytest-3 -s -v tests/
-        ```
